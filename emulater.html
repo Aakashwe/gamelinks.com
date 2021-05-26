@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game World</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <!-- link of css -->
+    <link rel="stylesheet" href="../CSS work/emulater.css">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    box-sizing: border-box;
+}
+body::before{
+    content: "";
+    position: absolute;
+    background:url('../bg/pexels-pixabay-275033.jpg');
+    height: 123%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.78;
+
+}
+/* navigation */
+#check{
+    display: none;
+}
+#cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 15px;
+    font-size: 30px;
+    color: #0a5275;
+    position: absolute;
+    padding: 4px 9px;
+    margin-left: 3rem;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+#check:checked ~ label #btn{
+    left: -250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#btn{
+    top: auto;
+    left: 1rem;
+    margin-top: 0.79rem;
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: #042331;
+    color: white;
+    padding: 5px 8px;
+    transition: all .4s ease-in-out;
+    display: flex;
+}
+#check:checked ~ #navbar{
+    left: 0;
+}
+#logo{
+    display: flex;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    justify-content: center;
+}
+#bg::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+#navbar{
+    background-color: #042331;
+    height: 100%;
+    width: 300px;
+    top: 0;
+    left: -300px;
+    position: fixed;
+    display: flex;
+    transition: all .5s ease-in-out;
+}
+#navbar ul li a{
+    color: white;
+    display: flex;
+    margin-bottom: -32px;
+    margin-top: 3rem;
+    margin-left: -310px;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    height: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    padding-left: 40px;
+    font-family: 'Poppins', sans-serif;
+    transition: all .3s ease-in-out;
+}
+#navbar ul li:hover a{
+    padding-left: 50px;
+}
+
+
+#navbar ul li .home{
+    margin-top: 5rem;
+}
+#navbar header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: 'Fredoka One', cursive;
+}
+#navbar header{
+    background-color: #063146;
+    color: white;
+    font-size: 1em;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    height: 4rem;
+    width: 396rem;
+}
+
+@media (max-width:990px){
+    html{
+        font-size: 93%;
+    }
+}
+/* bluestack */
+#bluestack{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    margin-left: 4rem;
+}
+.bluestackp{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    color: white;
+}
+
+/* smartgaga */
+.img{
+    height: 11rem;
+    width: 10rem;
+}
+#smartgaga{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -13rem;
+    margin-left: 17rem;
+}
+.smartgaga{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    color: white;
+}
+
+@media (max-width:446px){
+    #smartgaga{
+        margin-top: 1rem;
+        margin-left: 4rem;
+    }
+}
+/* ld player */
+.img{
+    height: 11rem;
+    width: 10rem;
+}
+#ldplayer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -13rem;
+    margin-left: 31rem;
+}
+.ldplayer{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    color: white;
+}
+
+@media (max-width:605px){
+    #ldplayer{
+        margin-top: 1rem;
+        margin-left: 4rem;
+    }
+}
+@media (max-width:605px){
+    body::before{
+        content: "";
+        position: absolute;
+        background:url('../bg/pexels-pixabay-275033.jpg');
+        height: 400%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.78;
+    
+    }
+}
+@media (max-width:806px){
+    body::before{
+        content: "";
+        position: absolute;
+        background:url('../bg/pexels-pixabay-275033.jpg');
+        height: 400%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.78;
+    
+    }
+}
+/* memuplayer */
+.img{
+    height: 11rem;
+    width: 10rem;
+}
+#memuplayer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -13rem;
+    margin-left: 44rem;
+}
+.memuplayer{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    color: white;
+}
+@media (max-width:812px){
+    #memuplayer{
+        margin-top: 1rem;
+        margin-left: 4rem;
+    }
+}
+/* nox player */
+.img{
+    height: 11rem;
+    width: 10rem;
+}
+#noxplayer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -13rem;
+    margin-left: 59rem;
+}
+.noxplayer{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    color: white;
+}
+@media (max-width:1114px){
+    #noxplayer{
+        margin-top: 1rem;
+        margin-left: 4rem;
+    }
+}
+/* gameloop */
+.img{
+    height: 11rem;
+    width: 10rem;
+}
+#gameloop{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-left: 4rem;
+}
+.gameloop{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    color: white;
+}
+.imgg{
+    height: 11rem;
+    width: 25rem;
+    background-color: black;
+}
+@media (max-width:1114px){
+    #gameloop{
+        margin-top: 1rem;
+        margin-left: 4rem;
+    }
+    .imgg {
+        width: 22rem;
+    }
+}
+</style>
+<body>
+    <input type="checkbox" name="check" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <header id="bg">
+
+    </header>
+    <header id="logo">
+        <h1>Game World</h1>
+    </header>
+    <nav id="navbar">
+        <header>
+            <h1>
+                Game World
+            </h1>
+        </header>
+        <ul>
+            <li><a href="index.html" class="home">Home</a ></li>
+                <li><a href="emulater.html">Emulater</a></li>
+                <li><a href="more games.html">More Games</a></li>
+                <li><a href="https://www.youtube.com/">Go to my Youtube Channel</a></li>
+            </ul>
+        </nav>
+<section class="emualterimg">
+    <div id="bluestack">
+        <a href="https://www.bluestacks.com/" target="_blank"><img src="../emualter img/bluestack.jpg" alt="Menuplayer">
+            <p class="bluestackp">Bluestack</p>
+        </a>
+
+    </div>
+    <div id="smartgaga">
+        <a href="https://smartgaga-android-emulator.en.download.it/" target="_blank"><img src="../emualter img/smart ga ga.png" alt="Memuplayer" class="img">
+            <p class="smartgaga">Smart Ga Ga</p>
+        </a>
+
+    </div>
+    <div id="ldplayer">
+        <a href="https://www.ldplayer.net/" target="_blank"><img src="../emualter img/ld player.png" alt="Memuplayer" class="img">
+            <p class="ldplayer">LD player</p>
+        </a>
+
+    </div>
+    <div id="memuplayer">
+        <a href="https://www.memuplay.com/" target="_blank"><img src="../emualter img/menu player.jpg" alt="MemuPlayer" class="img">
+            <p class="memuplayer">Memu Players</p>
+        </a>
+
+    </div>
+    <div id="noxplayer">
+        <a href="https://www.bignox.com/" target="_blank"><img src="../emualter img/nox player.png" alt="MemuPlayer" class="img">
+            <p class="noxplayer">Nox Player</p>
+        </a>
+    </div>
+    <div id="gameloop">
+        <a href="https://www.gameloop.com/en" target="_blank"><img src="../emualter img/gameloop.webp" alt="gameloop" class="imgg">
+            <p class="gameloop">Game Loop</p>
+        </a>
+    </div>
+   
+
+</section>
+
+</body>
+</html>

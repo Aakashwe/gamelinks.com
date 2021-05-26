@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    box-sizing: border-box;
+}
+body::before{
+    content: "";
+    position: absolute;
+    background:url('../bg/pexels-pixabay-275033.jpg');
+    height: 144%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.78;
+
+}
+/* navigation */
+#check{
+    display: none;
+}
+#cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 15px;
+    font-size: 30px;
+    color: #0a5275;
+    position: absolute;
+    padding: 4px 9px;
+    margin-left: 3rem;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+#check:checked ~ label #btn{
+    left: -250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#btn{
+    top: auto;
+    left: 1rem;
+    margin-top: 0.79rem;
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: #042331;
+    color: white;
+    padding: 5px 8px;
+    transition: all .4s ease-in-out;
+    display: flex;
+}
+#check:checked ~ #navbar{
+    left: 0;
+}
+#logo{
+    display: flex;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    justify-content: center;
+}
+#bg::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+#navbar{
+    background-color: #042331;
+    height: 100%;
+    width: 300px;
+    top: 0;
+    left: -300px;
+    position: fixed;
+    display: flex;
+    transition: all .5s ease-in-out;
+}
+#navbar ul li a{
+    color: white;
+    display: flex;
+    margin-bottom: -32px;
+    margin-top: 3rem;
+    margin-left: -310px;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    height: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    padding-left: 40px;
+    font-family: 'Poppins', sans-serif;
+    transition: all .3s ease-in-out;
+}
+#navbar ul li:hover a{
+    padding-left: 50px;
+}
+
+
+#navbar ul li .home{
+    margin-top: 5rem;
+}
+#navbar header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: 'Fredoka One', cursive;
+}
+#navbar header{
+    background-color: #063146;
+    color: white;
+    font-size: 1em;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    height: 4rem;
+    width: 396rem;
+}
+
+@media (max-width:990px){
+    html{
+        font-size: 93%;
+    }
+}
+/* games section */
+#games{
+    display: flex;
+}
+ /* counter strike section */
+ .counterstrike{
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+ }
+ .counterp{
+    color: white;
+    display: flex;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+ /* gta vc section */
+ .gtavc{
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+ }
+ .gtavcp{
+    color: white;
+    display: flex;
+    margin-top: 0rem;
+    margin-left: 3rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+@media screen and (max-width:482px) {
+    .gtavc{
+        margin-top: 24rem;
+    margin-left: -14rem;
+    }
+}
+@media screen and (max-width:1240px) {
+    body::before{
+        content: "";
+        position: absolute;
+        background:url('../bg/pexels-pixabay-275033.jpg');
+        height: 400%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    opacity: 0.78;
+}
+}
+ /* gta San andreas section */
+ .gtasa{
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+ }
+ .gtasap{
+    color: white;
+    display: flex;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+@media screen and (max-width:754px) {
+    .gtasa{
+        margin-top: 24rem;
+        margin-left: -14rem;
+    }
+
+}
+@media screen and (max-width:488px) {
+    .gtasa{
+        margin-top: 44rem;
+    margin-left: -14rem;
+    }
+
+}
+/* IGI-1 section */
+.igi1{
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+ }
+ .igi1p{
+    color: white;
+    display: flex;
+    margin-top: 0rem;
+    margin-left: 7rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+.img{
+    height: 16rem;
+    width: 17rem;
+}
+@media screen and (max-width:1110px) {
+    .igi1{
+        margin-top: 22rem;
+        margin-left: -48rem;
+    }
+}
+@media screen and (max-width:488px) {
+    .igi1{
+        margin-top: 66rem;
+    margin-left: -16rem;
+    }
+}
+@media screen and (max-width:1110px) {
+    .igi1p{
+        margin-left: 6rem;
+    }
+}
+@media screen and (max-width:990px) {
+    .igi1{
+        margin-top: 24rem;
+    margin-left: -49rem;
+    }
+}
+@media screen and (max-width:750px) {
+    .igi1{
+        margin-top: 24rem;
+        margin-left: -33rem;
+    }
+}
+@media screen and (max-width:750px) {
+    .igi1{
+        margin-top: 64rem;
+        margin-left: -16rem;
+    }
+}
+ /* cod section */
+ .cod1{
+    display: flex;
+    margin-top: 23rem;
+    margin-left: -68rem;
+    margin-right: 1rem;
+ }
+ .codp{
+    color: white;
+    display: flex;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+@media screen and (max-width:1108px) {
+    .cod1{
+        margin-top: 22rem;
+        margin-left: 2rem;
+    }
+    .img{
+        width: 13rem;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .cod1{
+        margin-top: 24rem;
+    }
+}
+@media screen and (max-width:750px) {
+    .cod1{
+        margin-top: 43rem;
+        margin-left: -14rem;
+    }
+}
+@media screen and (max-width:488px) {
+    .cod1{
+        margin-top: 84rem;
+        margin-left: -14rem;
+    }
+}

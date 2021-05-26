@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game World</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <!-- link of css -->
+    <link rel="stylesheet" href="../CSS work/more games.css">
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    box-sizing: border-box;
+}
+body::before{
+    content: "";
+    position: absolute;
+    background:url('../bg/pexels-pixabay-275033.jpg');
+    height: 144%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.78;
+
+}
+/* navigation */
+#check{
+    display: none;
+}
+#cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 15px;
+    font-size: 30px;
+    color: #0a5275;
+    position: absolute;
+    padding: 4px 9px;
+    margin-left: 3rem;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+#check:checked ~ label #btn{
+    left: -250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#btn{
+    top: auto;
+    left: 1rem;
+    margin-top: 0.79rem;
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: #042331;
+    color: white;
+    padding: 5px 8px;
+    transition: all .4s ease-in-out;
+    display: flex;
+}
+#check:checked ~ #navbar{
+    left: 0;
+}
+#logo{
+    display: flex;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    justify-content: center;
+}
+#bg::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+#navbar{
+    background-color: #042331;
+    height: 100%;
+    width: 300px;
+    top: 0;
+    left: -300px;
+    position: fixed;
+    display: flex;
+    transition: all .5s ease-in-out;
+}
+#navbar ul li a{
+    color: white;
+    display: flex;
+    margin-bottom: -32px;
+    margin-top: 3rem;
+    margin-left: -310px;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    height: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    padding-left: 40px;
+    font-family: 'Poppins', sans-serif;
+    transition: all .3s ease-in-out;
+}
+#navbar ul li:hover a{
+    padding-left: 50px;
+}
+
+
+#navbar ul li .home{
+    margin-top: 5rem;
+}
+#navbar header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: 'Fredoka One', cursive;
+}
+#navbar header{
+    background-color: #063146;
+    color: white;
+    font-size: 1em;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    height: 4rem;
+    width: 396rem;
+}
+
+@media (max-width:990px){
+    html{
+        font-size: 93%;
+    }
+}
+/* games section */
+#games{
+    display: flex;
+}
+ /* counter strike section */
+ .counterstrike{
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+ }
+ .counterp{
+    color: white;
+    display: flex;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+ /* gta vc section */
+ .gtavc{
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+ }
+ .gtavcp{
+    color: white;
+    display: flex;
+    margin-top: 0rem;
+    margin-left: 3rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+@media screen and (max-width:482px) {
+    .gtavc{
+        margin-top: 24rem;
+    margin-left: -14rem;
+    }
+}
+@media screen and (max-width:1240px) {
+    body::before{
+        content: "";
+        position: absolute;
+        background:url('../bg/pexels-pixabay-275033.jpg');
+        height: 400%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    opacity: 0.78;
+}
+}
+ /* gta San andreas section */
+ .gtasa{
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+ }
+ .gtasap{
+    color: white;
+    display: flex;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+@media screen and (max-width:754px) {
+    .gtasa{
+        margin-top: 24rem;
+        margin-left: -14rem;
+    }
+
+}
+@media screen and (max-width:488px) {
+    .gtasa{
+        margin-top: 44rem;
+    margin-left: -14rem;
+    }
+
+}
+/* IGI-1 section */
+.igi1{
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+ }
+ .igi1p{
+    color: white;
+    display: flex;
+    margin-top: 0rem;
+    margin-left: 7rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+.img{
+    height: 16rem;
+    width: 17rem;
+}
+@media screen and (max-width:1110px) {
+    .igi1{
+        margin-top: 22rem;
+        margin-left: -48rem;
+    }
+}
+@media screen and (max-width:488px) {
+    .igi1{
+        margin-top: 66rem;
+    margin-left: -16rem;
+    }
+}
+@media screen and (max-width:1110px) {
+    .igi1p{
+        margin-left: 6rem;
+    }
+}
+@media screen and (max-width:990px) {
+    .igi1{
+        margin-top: 24rem;
+    margin-left: -49rem;
+    }
+}
+@media screen and (max-width:750px) {
+    .igi1{
+        margin-top: 24rem;
+        margin-left: -33rem;
+    }
+}
+@media screen and (max-width:750px) {
+    .igi1{
+        margin-top: 64rem;
+        margin-left: -16rem;
+    }
+}
+ /* cod section */
+ .cod1{
+    display: flex;
+    margin-top: 23rem;
+    margin-left: -68rem;
+    margin-right: 1rem;
+ }
+ .codp{
+    color: white;
+    display: flex;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+@media screen and (max-width:1108px) {
+    .cod1{
+        margin-top: 22rem;
+        margin-left: 2rem;
+    }
+    .img{
+        width: 13rem;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .cod1{
+        margin-top: 24rem;
+    }
+}
+@media screen and (max-width:750px) {
+    .cod1{
+        margin-top: 43rem;
+        margin-left: -14rem;
+    }
+}
+@media screen and (max-width:488px) {
+    .cod1{
+        margin-top: 84rem;
+        margin-left: -14rem;
+    }
+}
+</style>
+<body>
+    <input type="checkbox" name="check" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <header id="bg">
+
+    </header>
+    <header id="logo">
+        <h1>Game World</h1>
+    </header>
+    <nav id="navbar">
+        <header>
+            <h1>
+                Game World
+            </h1>
+        </header>
+        <ul>
+            <li><a href="index.html" class="home">Home</a></li>
+            <li><a href="emulater.html">Emulater</a></li>
+            <li><a href="more games.html">More Games</a></li>
+            <li><a href="https://www.youtube.com/">Go to my Youtube Channel</a></li>
+        </ul>
+    </nav>
+    <section id="games">
+        <div class="counterstrike">
+            <a href="https://counter-strike.en.uptodown.com/windows" target="_blank"><img
+                    src="../more games img/counter strike.jpg" alt="Counter Strike">
+                <p class="counterp">Counter Strike</p>
+            </a>
+        </div>
+        <div class="gtavc">
+            <a href="https://produnia.com/gta-vice-city-download-for-pc/" target="_blank"><img
+                    src="../more games img/gta vc.jpg" alt="GTA:VIce city">
+                <p class="gtavcp">GTA:VC</p>
+            </a>
+        </div>
+        <div class="gtasa">
+            <a href="https://grand-theft-auto-san-andreas-game.en.softonic.com/" target="_blank"><img
+                    src="../more games img/gta san.jpg" alt="GTA:San">
+                <p class="gtasap">GTA:San Andreas</p>
+            </a>
+        </div>
+        <div class="igi1">
+            <a href="https://tnhindi.blogspot.com/2017/08/igi-1-compressed.html" target="_blank"><img
+                    src="../more games img/igi1.jpg" alt="IGI-1" class="img">
+                <p class="igi1p">IGI-1</p>
+            </a>
+        </div>
+        <div class="cod1">
+            <a href="https://tnhindi.blogspot.com/2017/08/call-of-duty-1-download-compressed.html" target="_blank"><img
+                    src="../more games img/cod1.jpg" alt="IGI-1" class="img">
+                <p class="codp">Call OF Duty-1</p>
+            </a>
+        </div>
+       
+
+    </section>
+</body>
+
+</html>
